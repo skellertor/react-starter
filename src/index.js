@@ -13,7 +13,6 @@ import { renderDevTools } from './DevTools';
 import configureStore from './store';
 
 import ExampleComponent from './components/example/ExampleComponent';
-import ExampleComponentTwo from './components/exampleTwo/ExampleTwoComponent';
 
 const provider = (
   <Provider store={configureStore()}>
@@ -21,8 +20,7 @@ const provider = (
       {renderDevTools()}
       <Router history={createBrowserHistory()}>
         <Switch>
-          <Route exact path="/" component={withRouter(ExampleComponent)} />
-          <Route exact path='/two' component={withRouter(ExampleComponentTwo)}/>
+          <Route exact={true} path="/" component={withRouter(ExampleComponent)} />
         </Switch>
       </Router>
     </div>

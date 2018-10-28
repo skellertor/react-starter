@@ -6,14 +6,15 @@ import DockMonitor from 'redux-devtools-dock-monitor';
 import ChartMonitor from 'redux-devtools-chart-monitor';
 
 export const DevTools = createDevTools(
-    <DockMonitor toggleVisibilityKey='ctrl-h'
-                 changePositionKey='ctrl-d'
-                 changeMonitorKey='ctrl-m'
-                 defaultIsVisible={true}>
-        <LogMonitor theme='tomorrow' />
-        <SliderMonitor/>
-        <ChartMonitor theme='tomorrow' />
-    </DockMonitor>
+  <DockMonitor toggleVisibilityKey="ctrl-h"
+    changePositionKey="ctrl-d"
+    changeMonitorKey="ctrl-m"
+    defaultIsVisible={false}
+  >
+    <LogMonitor theme="tomorrow" />
+    <SliderMonitor />
+    <ChartMonitor theme="tomorrow" />
+  </DockMonitor>
 );
 
 export const renderDevTools = () => {

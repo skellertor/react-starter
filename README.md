@@ -6,13 +6,13 @@
 1. Clone the repo directly.
     * Change package.json to reflect new project you are working on.
     * Change git from pointing to this directory to point at your new project repo.
-2. Use [clip-boilerplate](https://www.npmjs.com/package/@clipmx/create.boilerplate) generator to create a new react project that uses a new package.json and is
-not linked to this git repo. `clip-react` can be found [here](https://www.npmjs.com/package/@clipmx/create.boilerplate). Just follow
+2. Use [generate-react-boilerplate](https://github.com/skellertor/generate-react-boilerplate) generator to create a new react project that uses a new package.json and is
+not linked to this git repo. `generate-react-boilerplate` can be found [here](https://github.com/skellertor/generate-react-boilerplate). Just follow
 the directions in the `README.md`.
 
 # :1234: Steps to get up an running
 
-1. If you cloned this repo from the generator tool [clip-boilerplate](https://www.npmjs.com/package/@clipmx/create.boilerplate)
+1. If you cloned this repo from the generator tool [generate-react-boilerplate](https://github.com/skellertor/generate-react-boilerplate)
 you already have all the dependencies installed. If you cloned this repo directly you will have do an `npm install` in the root of your project.
 
 2. After the dependencies are installed you can run one of twelve different scripts that run tests, lint, create a build, 

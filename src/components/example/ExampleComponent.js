@@ -1,26 +1,17 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import {
-  showExampleAction,
-  setCurrentPage
-} from '../../actions/app-actions';
+import { showExampleAction } from '../../actions/app-actions';
 
 import './ExampleComponent.scss';
 
 class ExampleComponent extends React.Component {
-
-  componentDidMount() {
-    const { location } = this.props;
-    this.props.setCurrentPage(location.pathname);
-  }
 
   render() {
     return (
       <div className="example-component">
         <p>Example App</p>
         <button onClick={this.showExample}>cat fight</button>
-        <button onClick={this.goToPageTwo}>page two</button>
         {this.renderCats()}
       </div>
     );
@@ -37,8 +28,6 @@ class ExampleComponent extends React.Component {
   }
 
   showExample = () => this.props.showExampleAction();
-
-  goToPageTwo = () => this.props.history.push('/two');
 }
 
 function mapStateToProps(state) {
@@ -49,8 +38,7 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    showExampleAction: () => dispatch(showExampleAction()),
-    setCurrentPage: (page) => dispatch(setCurrentPage(page))
+    showExampleAction: () => dispatch(showExampleAction())
   };
 }
 
