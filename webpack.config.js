@@ -4,7 +4,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const path = require('path');
 
-module.exports = env => {
+module.exports = (env) => {
   let devtool = 'eval-source-map';
   const plugins = [
     new webpack.DefinePlugin({

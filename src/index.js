@@ -3,9 +3,8 @@ import ReactDOM from 'react-dom';
 import {
   Router,
   Route,
-  Switch,
-  withRouter
-} from 'react-router-dom';
+  Switch
+} from 'react-router';
 import { createBrowserHistory } from 'history';
 import { Provider } from 'react-redux';
 
@@ -14,17 +13,17 @@ import configureStore from './store';
 
 import ExampleComponent from './components/example/ExampleComponent';
 
-const provider = (
+const App = (
   <Provider store={configureStore()}>
     <div>
       {renderDevTools()}
       <Router history={createBrowserHistory()}>
         <Switch>
-          <Route exact={true} path="/" component={withRouter(ExampleComponent)} />
+          <Route exact={true} path="/" component={ExampleComponent} />
         </Switch>
       </Router>
     </div>
   </Provider>
 );
 
-ReactDOM.render(provider, document.getElementById('root'));
+ReactDOM.render(App, document.getElementById('root'));
