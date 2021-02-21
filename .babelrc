@@ -1,14 +1,24 @@
 {
-  "presets": ["env", "react", "stage-3", "es2015"],
+  "presets": ["@babel/preset-react", ["@babel/preset-env", { "targets" : { "node": "current" } }]],
   "plugins": [
-    "transform-class-properties",
-    "transform-regenerator",
-    "transform-runtime",
-    "syntax-dynamic-import"
+    "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-transform-spread",
+    "@babel/plugin-proposal-object-rest-spread",
+    "@babel/plugin-transform-classes"
   ],
   "env": {
     "prod": {
-      "presets": ["minify"]
+      "presets": [
+        "minify",
+        "@babel/preset-react",
+        ["@babel/preset-env", { "targets" : { "node": "current" } }]
+      ],
+      "plugins": [
+        "@babel/plugin-proposal-class-properties",
+        "@babel/plugin-transform-spread",
+        "@babel/plugin-proposal-object-rest-spread",
+        "@babel/plugin-transform-classes"
+      ]
     }
   }
 }

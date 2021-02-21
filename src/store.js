@@ -5,14 +5,12 @@ import thunk from 'redux-thunk';
 import { rootReducer } from './reducers';
 import { DevTools } from './DevTools';
 
-let middleware = [thunk];
-let enhancer = null;
-if (process.env.NODE_ENV !== 'prod') {
-  middleware = [ ...middleware, createLogger()];
-  enhancer = compose(applyMiddleware(...middleware), DevTools.instrument());
-} else {
-  enhancer = compose(applyMiddleware(...middleware));
-}
+const middleware = process.env.NODE_ENV === 'prod'
+  ? [thunk]
+  : [thunk, createLogger()];
+const enhancer = process.env.NODE_ENV === 'prod'
+  ? compose(applyMiddleware(...middleware))
+  : compose(applyMiddleware(...middleware), DevTools.instrument());
 
 function configureStore(initialState) {
   return createStore(rootReducer, initialState, enhancer);
