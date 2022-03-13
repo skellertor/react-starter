@@ -36,7 +36,7 @@ module.exports = (env) => {
           exclude: /node_modules/,
         },
         {
-          test: /\.scss$/,
+          test: /\.(scss|sass|css)$/,
           use: [
             {
               loader: 'style-loader',
