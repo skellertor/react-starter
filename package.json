@@ -1,8 +1,8 @@
 {
   "author": "skellertor",
   "name": "react.boilerplate",
-  "version": "1.0.1",
-  "description": "A react app boilerplate with state management, testing libs, linting, and npm scripts already included",
+  "version": "2.0.0",
+  "description": "A react app boilerplate with state management and npm scripts already included",
   "devDependencies": {
     "@babel/core": "^7.12.17",
     "@babel/preset-env": "^7.16.11",
@@ -19,10 +19,7 @@
     "webpack-dev-server": "^4.7.4"
   },
   "dependencies": {
-    "axios": "^0.26.1",
     "history": "^4.7.2",
-    "lodash": "^4.17.4",
-    "moment": "^2.18.1",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
